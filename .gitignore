@@ -1,0 +1,24 @@
+#Ignore folders
+images/
+
+#Ignore robots.txt file
+robots.txt
+
+#ignore htaccess files
+.htaccess
+
+# ignore OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+#ignore these files too
+*.pdf
+*.old
+*.bak
+*.temp
+*.tmp
+*.swf
