@@ -1,0 +1,49 @@
+body{ font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility}
+h1, h2, h3, h4, h5, h6, th{font-family: 'Kreon', Georgia, serif;}
+.navbar-wrapper{background-color: #f15a2a;}
+.navbar{margin-bottom: 0; background-color: #f15a2a;}
+.navbar-brand,.navbar-nav>li>a{color: #fff;}
+.navbar-brand{padding: 15px 15px 15px 0;}
+.navbar-toggle{border:0;}
+.navbar-toggle .icon-bar{height: 3px; background-color: #fff;}
+.navbar-toggle:hover, .navbar-toggle:focus{background-color: #fcaf3f;}
+.jumbotron{margin-bottom: 0; background: #f15a2a url('../img/desart30.jpg') no-repeat center center fixed; background-size: cover;padding: 120px 60px 160px 60px; border-radius: 0; text-align: center; color: #fff;}
+.jumbotron h1 small{display: block; margin-top: 20px; color: inherit; font-size: 70%}
+.message{width: 100%; padding: 30px 0 10px 0; background-color: #f15a2a; text-align: center; color: #fff; z-index: 1000;}
+.home-page .content{padding-top: 30px;}
+.themes{background-color: #fff;}
+.theme{padding: 30px 60px 30px 60px;}
+.theme .thumbnail{border-radius: 0; border-width: 0;}
+.contest{padding-top: 100px; padding-bottom: 100px; background-color: #be1f2e; color: #fff; text-align: center;}
+.btn-des-arts{background-color: #fcaf3f; border-color: #fcaf3f;}
+footer{padding: 30px 0 60px 0; background-color: #ccc; color: #474949;}
+.sub-page footer{margin-top: 30px; }
+footer h3{font-size: 100%;}
+.exaggerate{font-size: 300%; margin-bottom: 1.5em;}
+/*added from schedule page*/
+.sub-page .message{padding: 15px 15px 0 15px; background-color: #eee; color: #f15a2a;}
+.header{padding: 30px 30px 0 30px;}
+.header h1{color: #f15a2a; font-size: 300%;}
+.list-group-item{border-radius: 0 !important;}
+.list-group>a{color: inherit; cursor: pointer;}
+a.list-group-item.active{background-color: #fcaf3f; border-color: #fcaf3f; }
+a.list-group-item.active>.badge, .nav-pills>.active>a>.badge{color: #fcaf3f;}
+.filters{margin: 20px 0 40px 0;}
+.filter-label{background-color: #fcaf3f;}
+.events{margin-bottom: 40px;}
+.time, .time-heading{width: 20%;}
+.event, .event-heading{width: 55%;}
+.place, .place-heading{width: 25%;}
+.description{display: block; margin-top: .5em; margin-bottom: .5em; font-size: 90%; color: #999;}
+.no-events-warning{display: none;}
+.badge-image img{width: 100%;}
+.rules li{margin-bottom: 1em;}
+.winners-list dt{font-weight: bold; color: #fcaf3f;}
+.winners-list dd{margin-bottom: 1em;}
+
+@media screen and (max-width: 700px){
+	.header{padding: 0 15px 0 15px;}
+	table.events thead{display: none;}
+	table.events td, table.events tr, table.events tbody{display: block; width: 100% !important;}
+	.events .time{margin-top: 1em; border-top: 0; color: #fcaf3f; font-weight: bold;}
+}
