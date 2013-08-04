@@ -55,11 +55,11 @@
 			<div class="col-lg-3 col-lg-push-9">
 				<h3>Filter the schedule</h3>
 				<div class="list-group filters">
-					<a class="filter list-group-item active" id="all">All<span class="badge">34</span></li>
-					<a class="filter list-group-item" id="art">Art<span class="badge">14</span></a>
-					<a class="filter list-group-item" id="music">Music<span class="badge">9</span></a>
-					<a class="filter list-group-item" id="dance">Dance<span class="badge">4</span></a>
-					<a class="filter list-group-item" id="performance">Performance<span class="badge">3</span></a>
+					<a class="filter list-group-item active" href="#all">All<span class="badge">34</span></li>
+					<a class="filter list-group-item" href="#art">Art<span class="badge">14</span></a>
+					<a class="filter list-group-item" href="#music">Music<span class="badge">9</span></a>
+					<a class="filter list-group-item" href="#dance">Dance<span class="badge">4</span></a>
+					<a class="filter list-group-item" href="#performance">Performance<span class="badge">3</span></a>
 				</div>
 			</div>
 			<div class="col-lg-9 col-lg-pull-3">
@@ -118,9 +118,6 @@
 							<td>Warrior Strings Quartet <span class="description">Student musicians from Maine West High School will perform a selection of light pop music.</span> <span class="label filter-label">Music</span></td>
 							<td>3rd Floor, Bridge</td>
 						</tr>
-						<tr class="no-events-warning">
-							<td colspan="3">There are no events for this category</td>
-						</td>
 					</tbody>
 				</table>
 				<h2>Saturday, October 20, 2012, "Family Day"</h2>
@@ -231,9 +228,9 @@
 				<table class="table events">
 					<thead>
 						<tr class="">
-							<th class="time">Time</th>
-							<th class="event">Event</th>
-							<th class="place">Location</th>
+							<th class="time-heading">Time</th>
+							<th class="event-heading">Event</th>
+							<th class="place-heading">Location</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -311,27 +308,63 @@
 		$(document).ready(function(){
 			$('.message').sticky();
 			
+			//check to see if hash is in url
+			var hash = window.location.hash;
+			
+			//if so call filtering function
+			if (hash){
+				//get link with associated hash as href
+				var filter = $('.filter[href=' + hash + ']');
+				var filter_type = hash.replace('#', '');
+				
+				//call the filter function
+				filter_events(filter_type, filter);
+			}
+			
+			
 			$('.filter').click(function(){
-				var filter_type = $(this).attr('id');
+				//get the current filter type
+				var filter_type = $(this).attr('href').replace('#', '');
 				
-				$('.filters a').removeClass('active');
+				//call the filtering functiion
+				filter_events(filter_type, $(this));
 				
-				if (filter_type == 'all'){
-					$('.event').show();
-					$(this).addClass('active');
-				}
-				else{
-					$('.event').show().not('.' + filter_type).hide()
-					$(this).addClass('active');
-					console.log($('.events tbody').children().count);
-					if ($('.events').children().count == 0){
-						$(this).find('no-results').show();
-					}
-				}
+				//add hash to url
+				window.location.hash = '#' + filter_type;
 				
 				return false;
+				
 			});
 		});
+		
+		function filter_events(filter_type, element){
+			//remove any no events warnings
+			$('.no-events-warning').remove();
+				
+			//remove active class from filters
+			$('.filters a').removeClass('active');
+			
+			//check if all is selected and show everything
+			if (filter_type == 'all'){
+				$('.event').show();
+				element.addClass('active');
+			}
+			else{
+				//show everything but filter type
+				$('.event').show().not('.' + filter_type).hide()
+				
+				//add active class to active filter
+				element.addClass('active');
+				
+				//run through events tables and check if all rows are hidden
+				//append no events warning message if 0
+				$('.events').each(function(){
+					if ($(this).find('tbody tr:visible').length == 0){
+						$(this).find('tbody').append('<tr class="no-events-warning"><td colspan="3">There are no events for this category</td></tr>');
+					}
+				});
+			}
+		}
 	</script>
 </body>
 </html>

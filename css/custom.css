@@ -35,7 +35,6 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge{color: #fcaf3f;}
 .event, .event-heading{width: 55%;}
 .place, .place-heading{width: 25%;}
 .description{display: block; margin-top: .5em; margin-bottom: .5em; font-size: 90%; color: #999;}
-.no-events-warning{display: none;}
 .badge-image img{width: 100%;}
 .rules li{margin-bottom: 1em;}
 .winners-list dt{font-weight: bold; color: #fcaf3f;}
