@@ -52,7 +52,7 @@
 	</div>
 	<div class="container schedule">
 		<div class="row">
-			<div class="col-lg-3 col-lg-push-9">
+			<div class="col-lg-3 col-lg-push-9 hidden-print">
 				<h3>Filter the schedule</h3>
 				<div class="list-group filters">
 					<a class="filter list-group-item active" href="#all">All<span class="badge">34</span></li>
@@ -121,7 +121,7 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<h3>Questions?</h3>
-					<p>Contact Jo Bonell by phone at 847-376-2789 or by email at jbonell@dppl.org</p>
+					<p><span class="visible-print inline">Visit our website at des-arts.org. </span>Contact Jo Bonell by phone at 847-376-2789 or by email at jbonell@dppl.org</p>
 				</div>
 				<div class="col-lg-4">
 					<h3>Presenters</h3>
@@ -143,14 +143,6 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.sticky.js"></script>
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-   mathiasbynens.be/notes/async-analytics-snippet
-	<script>
-		var _gaq=[['_setAccount','UA-2123354-11'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>-->
 	<script>
 		$(document).ready(function(){
 			$('.message').sticky();
@@ -212,6 +204,14 @@
 				});
 			}
 		}
+	</script>
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+   mathiasbynens.be/notes/async-analytics-snippet-->
+	<script>
+		var _gaq=[['_setAccount','UA-43996605-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 </body>
 </html>
