@@ -33,9 +33,12 @@
 					<a class="navbar-brand des-arts-brand" href="/">Des Arts</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="schedule.html">Schedule</a></li>
-							<li><a href="contest.html">Contest</a></li>
-							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="schedule">Schedule</a></li>
+							<li><a href="contest">Contest</a></li>
+							<li><a href="about">About</a></li>
+						</ul>
+						<ul class="nav navbar-nav pull-right">
+							<li><a href="http://www.journal-topics.com/" class="sponsor">Sponsored by the Journal and Topics Newspapers</a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,15 +63,16 @@
 			<div class="col-lg-3 col-lg-push-9 hidden-print">
 				<h3>Filter the schedule</h3>
 				<div class="list-group filters">
-					<a class="filter list-group-item active" href="#all">All<span class="badge">34</span></li>
-					<a class="filter list-group-item" href="#art">Art<span class="badge">14</span></a>
-					<a class="filter list-group-item" href="#music">Music<span class="badge">9</span></a>
-					<a class="filter list-group-item" href="#dance">Dance<span class="badge">4</span></a>
-					<a class="filter list-group-item" href="#performance">Performance<span class="badge">3</span></a>
+					<a class="filter list-group-item active" href="#all">All<span class="badge" id="all-count"></span></li>
+					<a class="filter list-group-item" href="#art">Art<span class="badge" id="art-count"></span></a>
+					<a class="filter list-group-item" href="#music">Music<span class="badge" id="music-count"></span></a>
+					<a class="filter list-group-item" href="#dance">Dance<span class="badge" id="dance-count"></span></a>
+					<a class="filter list-group-item" href="#performance">Performance<span class="badge" id="performance-count"></span></a>
+					<a class="filter list-group-item" href="#kids">Kids<span class="badge" id="kids-count"></span></a>
 				</div>
 			</div>
 			<div class="col-lg-9 col-lg-pull-3">
-				<h2>Friday, October 11, 2013, "Opening Night"</h2>
+				<h2>Friday, October 11, 2013, &ldquo;Opening Night&rdquo;</h2>
 				<table class="table events">
 					<thead>
 						<tr>
@@ -79,28 +83,33 @@
 					</thead>
 					<tbody>
 						<tr class="event music">
-							<td class="time">6:00 &ndash; 6:45 p.m.</td>
-							<td>Reception <span class="label filter-label">Music</span>  <span class="description">During the reception enjoy a selection of standards from the Great American Songbook performed by the vocal/piano duo of Joan and Tom Kuersten.</span></td>
-							<td>1st Floor, Meeting Rooms</td>
+							<td class="time"><span class="event-time"><span class="event-time">6:00 &ndash; 6:45 p.m.</span> <span class="label filter-label">Music</span></td>
+							<td><span class="event-title">Reception</span>  <span class="event-description">During the reception enjoy a selection of standards from the Great American Songbook performed by the vocal/piano duo of Joan and Tom Kuersten.</span></td>
+							<td>1st Floor, Meeting Room B/C</td>
 						</tr>
 						<tr class="event art">
-							<td class="time">6:00 &ndash; 9:00 p.m.</td>
-							<td>Art Show <span class="label filter-label">Art</span> <span class="description">All artwork submitted by Des Plaines residents. Make sure you vote for your favorite in each category. Winners will be announced at the Awards Ceremony following the Saturday performances.</span></td>
+							<td class="time"><span class="event-time">6:00 &ndash; 9:00 p.m.</span> <span class="label filter-label">Art</span></td>
+							<td>Art Show <span class="event-description">All artwork submitted by Des Plaines residents. Make sure you vote for your favorite in each category. Winners will be announced at the Awards Ceremony following the Saturday performances.</span></td>
 							<td><ul class="list-unstyled"><li>2nd Floor&ndash;Youth Entries<s</li><li>3rd Floor&ndash;Teen and Adult Entries</li></ul></td>
 						</tr>
+						<tr class="event performance">
+							<td class="time"><span class="event-time">6:00 &ndash; 9:00 p.m.</span> <span class="label filter-label">Performance</span></td>
+							<td>An Historical Look at the Footlighters Theatre Company in Des Plaines. <span class="event-description">Exhibit by the Des Plaines History Center.</span></td>
+							<td>1st Floor, Meeting Room Hall</td>
+						</tr>
 						<tr class="event music">
-							<td class="time">7:00 &ndash; 7:45 p.m.</td>
-							<td>Classical Guitar <span class="label filter-label">Music</span> <span class="description">Chris Linenberger will play a selection of classical music by Augustin Barrios, Manuel Ponce, Johann Sebastian Bach and Roland Dyens.</span></td>
+							<td class="time"><span class="event-time">7:00 &ndash; 7:45 p.m.</span> <span class="label filter-label">Music</span></td>
+							<td>Classical Guitar <span class="event-description">Chris Linenberger will play a selection of classical music by Augustin Barrios, Manuel Ponce, Johann Sebastian Bach and Roland Dyens.</span></td>
 							<td>3rd Floor Bridge</td>
 						</tr>
 						<tr class="event music">
-							<td class="time">6:00 &ndash; 9:00 p.m.</td>
-							<td>The Sound of Musicals <span class="label filter-label">Music</span> <span class="description">Take a walk down Broadway and 42nd Street as the Northwest Choral Society celebrates showstoppers from some of musical theater’s greatest hits. </span></td>
+							<td class="time"><span class="event-time">6:00 &ndash; 9:00 p.m.</span> <span class="label filter-label">Music</span></td>
+							<td>The Sound of Musicals <span class="event-description">Take a walk down Broadway and 42nd Street as the Northwest Choral Society celebrates showstoppers from some of musical theater’s greatest hits. </span></td>
 							<td>1st Floor, Meeting Room B/C</td>
 						</tr>
 					</tbody>
 				</table>
-				<h2>Saturday, October 12, 2013</h2>
+				<h2>Saturday, October 12, 2013 &ldquo;Family Day&rdquo;</h2>
 				<table class="table events">
 					<thead>
 						<tr class="">
@@ -111,11 +120,35 @@
 					</thead>
 					<tbody>
 						<tr class="event art">
-							<td class="time">9:00 a.m. &ndash; 5:00 p.m.</td>
-							<td>Art Show <span class="label filter-label">Art</span> <span class="description">All artwork was submitted by Des Plaines residents. Make sure you vote for your favorite in each category. Winners will be announced at the Awards Ceremony following the Sunday performances.</span></td>
+							<td class="time"><span class="event-time">9:00 a.m. &ndash; 5:00 p.m.</span> <span class="label filter-label">Art</span></td>
+							<td>Art Show <span class="event-description">All artwork was submitted by Des Plaines residents. Make sure you vote for your favorite in each category. Winners will be announced at the Awards Ceremony following the Sunday performances.</span></td>
 							<td><ul class="list-unstyled"><li>2nd Floor &ndash; Youth Entries</li><li>3rd Floor &ndash; Teen and Adult Entries</li></ul></td>
 						</tr>
-						
+						<tr class="event performance">
+							<td class="time"><span class="event-time">9:00 a.m. &ndash; 9:00 p.m.</span> <span class="label filter-label">Performance</span></td>
+							<td>An Historical Look at the Footlighters Theatre Company in Des Plaines <span class="event-description">Exhibit by the Des Plaines History Center.</span></td>
+							<td>1st Floor, Meeting Room Hall</td>
+						</tr>
+						<tr class="event art kids">
+							<td class="time"><span class="event-time">10:00 a.m. &ndash; 2:00 p.m.</span> <span class="label filter-label">Art</span> <span class="label filter-label label-kids">Kids</span></td>
+							<td>Community Arts Mural <span class="event-description">Participate in painting a mural on the front window of the library. Drop by any time during the designated hours and let your creative spirit soar. Rhonda Popko of the Des Plaines Art Guild will supervise the project.</span></td>
+							<td>Library Plaza</td>
+						</tr>
+						<tr class="event art kids">
+							<td class="time"><span class="event-time">10:00 a.m. &ndash; 11:00 p.m.</span> <span class="label filter-label">Art</span> <span class="label filter-label label-kids">Kids</span></td>
+							<td>Fairy Houses <span class="event-description">Build a whimsical fairy house using leaves, branches, acorns and more. Christy Pieszkiewicz will show you how.</span></td>
+							<td>2nd Floor, Storytime Room</td>
+						</tr>
+						<tr class="event performance">
+							<td class="time"><span class="event-time">11:00 a.m. &ndash; 11:30 p.m.</span> <span class="label filter-label">Performance</span></td>
+							<td>Big Noise in Des Plaines <span class="event-description">Members of the Big Noise Theatre Company will give a short performance and describe volunteer opportunities available at the theatre. Big Noise performs at the Prairie Lakes Community Center in Des Plaines.</span></td>
+							<td>1st Floor, Meeting Room B/C</td>
+						</tr>
+						<tr class="event music kids">
+							<td class="time"><span class="event-time">11:00 a.m. &ndash; 12:00 p.m.</span> <span class="label filter-label">Music</span> <span class="label filter-label label-kids">Kids</span></td>
+							<td>Pattisongs <span class="event-description">Singer/musician Patti Ecker will perform a selection of old-time songs using the mountain banjo and the parlor guitar. This interactive musical program is for children and parents.</span></td>
+							<td>2nd Floor, Alcove</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -126,15 +159,18 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<h3>Questions?</h3>
-					<p>Contact Jo Bonell by phone at 847-376-2789 or by email at jbonell@dppl.org <span class="visible-print inline">or go to des-arts.org</span></p>
+					<p>Contact Jo Bonell by phone at 847-376-2789 or by email at jbonell@dppl.org <span class="visible-print inline">or go to des-arts.org</span>.</p>
 				</div>
 				<div class="col-lg-4">
 					<h3>Presenters</h3>
-					<p>Presented by the Des Plaines Arts Council and the Des Plaines Public Library</p>
+					<p>Presented by the <a href="http://dpartcouncil.com/">Des Plaines Arts Council</a> and the <a href="http://dppl.org">Des Plaines Public Library</a>.</p>
+					<p>Photographs courtesy of the <a href="http://www.desplainescameraclub.com/">Des Plaines Camera Club</a>.</p>
 				</div>
 				<div class="col-lg-4">
 					<h3>Sponsors</h3>
-					<p>Sponsored by the Journal and Topics</p>
+					<div class="sponsor-image">
+						<a href="http://www.journal-topics.com/" title="Journal and Topics Newspapers"><img src="img/journal-logo-gray.png" alt="Sponsored by the Journal and Topics Newspapers" /></a>
+					</div> 
 				</div>
 			</div>
 			<hr />
@@ -150,7 +186,20 @@
 	<script src="js/jquery.sticky.js"></script>
 	<script>
 		$(document).ready(function(){
+			var categories = {'all' : 0, 'art' : 0, 'music' : 0, 'dance' : 0, 'performance' : 0, 'kids' : 0};
+
 			$('.message').sticky();
+
+			//count each filter type then append it to corresponding count badge
+			$.each(categories, function(e){
+					categories[e] = $('.' + e).length;
+					$('#' + e + '-count').html(categories[e]);
+					if (e != 'kids'){
+						categories['all'] = categories['all'] + categories[e];
+					}
+			});
+
+			$('#all-count').html(categories['all']);
 			
 			//check to see if hash is in url
 			var hash = window.location.hash;
