@@ -11,7 +11,7 @@ a:hover{color: #f15a2a;}
 .navbar-toggle{border:0;}
 .navbar-toggle .icon-bar{height: 3px; background-color: #fff;}
 .navbar-toggle:hover, .navbar-toggle:focus{background-color: #fcaf3f;}
-.sponsor{color: #474949 !important;}
+.sponsor{padding-right: 0 !important;}
 /*homepage*/
 .jumbotron{margin-bottom: 0; background: #f15a2a url('../img/desart30.jpg') no-repeat left center fixed; background-size: cover; padding: 160px 60px 180px 60px; border-radius: 0; text-align: center; color: #fff;}
 .jumbotron h1{text-shadow: 1px 1px 1px #888;}
@@ -41,12 +41,13 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge{color: #fcaf3f;}
 .event, .event-heading{width: 55%;}
 .place, .place-heading{width: 25%;}
 .event-time{display: block; margin-bottom: 6px;}
-.event-description{display: block; margin-top: .5em; margin-bottom: .5em; color: #999;}
+.event-description{display: block;  margin-top: .5em; margin-bottom: .5em; color: #777;}
 .badge-image img{width: 100%;}
 .rules li{margin-bottom: 1em;}
 .winners-list dt{font-weight: bold; color: #fcaf3f;}
 .winners-list dd{margin-bottom: 1em;}
-.organizers li, .directors li{display: inline-block; width: 45%; margin-right: 1em; line-height: 2;}
+.organizers, .directors{-moz-column-count: 2;-moz-column-gap: 20px;-webkit-column-count: 2;-webkit-column-gap: 20px;}
+.organizers li, .directors li{display: block;line-height: 2;}
 /*footer*/
 footer{padding: 30px 0 60px 0; background-color: #ccc; color: #474949;}
 .sub-page footer{margin-top: 30px; }
@@ -62,11 +63,12 @@ footer a{color: inherit; text-decoration: underline;}
 	table.events td, table.events tr, table.events tbody{display: block; width: 100% !important;}
 	.events .time{margin-top: 1em; border-top: 0; color: #fcaf3f; font-weight: bold;}
 	.event-time{display: inline;}
+    .organizers, .directors{-moz-column-count: 3;-moz-column-gap: 20px;-webkit-column-count: 3;-webkit-column-gap: 20px;}
 }
 
 @media screen and (max-width:400px){
 	.theme{padding: 15px;}
-	.organizers li, .directors li{width: 100%; margin-right: 0;}		
+    .organizers, .directors{-moz-column-count: 1;-moz-column-gap: 20px;-webkit-column-count: 1;-webkit-column-gap: 20px;}	
 }
 
 @media print{
