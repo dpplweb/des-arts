@@ -16,15 +16,19 @@ a:hover{color: #f15a2a;}
 .jumbotron{margin-bottom: 0; background: #f15a2a url('../img/desart30.jpg') no-repeat left center fixed; background-size: cover; padding: 160px 60px 180px 60px; border-radius: 0; text-align: center; color: #fff;}
 .jumbotron h1{text-shadow: 1px 1px 1px #888;}
 .jumbotron h1 small{display: block; margin-top: 20px; color: inherit; font-size: 70%; }
-.message{width: 100%; padding: 30px 0 10px 0; background-color: #f15a2a; text-align: center; color: #fff; z-index: 1000;}
+.message{width: 100%; padding: 30px 0 30px 0; background-color: #f15a2a; text-align: center; color: #fff; z-index: 1000;}
 .sub-page .message{padding: 15px 15px 0 15px; background-color: #f0f0f0; color: #555;}
+.lead{font-size: 200%;}
+
 .home-page .content{padding-top: 30px;}
 .themes{background-color: #fff;}
 .theme{padding: 30px 60px 30px 60px;}
 .theme .thumbnail{border-radius: 0; border-width: 0;}
-.contest{padding-top: 100px; padding-bottom: 100px; background-color: #712159; color: #fff; text-align: center;}
+.contest{padding-top: 100px; padding-bottom: 50px; background-color: #712159; color: #fff; text-align: center;}
+.contest .winners-list{margin-bottom: 25px;}
+.contest .winners-list dd{ margin-bottom: 14px;}
 .exaggerate{font-size: 300%;}
-.contest h3{margin-bottom: 2.5em;}
+/*.contest h3{margin-bottom: 2.5em;}*/
 .btn-des-arts{background-color: #fcaf3f; border-color: #fcaf3f;}
 /*subpage styles*/
 .header{padding: 30px 15px 0 15px;}
